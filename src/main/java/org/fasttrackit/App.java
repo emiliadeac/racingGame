@@ -14,26 +14,32 @@ public class App
         race.track = track;
 
         Engine engine = new Engine();
-        engine. manufacturer = "Volvo";
+        engine.manufacturer = "Volvo";
 
-        Car car1 = new Car();
-        car1.name = "Volvo";
-        car1.color= "black";
-        car1.fuelLevel = 100.00;
-        car1.mileage = 12.5;
+        Car car1 = new Car(engine);
+        car1.setName("Volvo");
+        car1.setColor("black");
+        car1.setFuelLevel(100.00);
+
+        car1.setMileage(12.5);
         car1.doorCount = 4;
-        car1.engine = engine;
 
 
         Engine engine2= new Engine();
         engine2.manufacturer = "Honda";
 
-        Car car2 = new Car();
-        car2.name = "Honda";
-        car2.color = "red";
-        car2.fuelLevel = 100;
-        car2.mileage = 13.5;
+        Car car2 = new Car(engine2);
+        car2.setName("Honda");
+        car2.setColor("red");
+        car2.setFuelLevel(100.0);
+        car2.setMileage(13.5);
         car2.doorCount = 2;
-        car2.engine= engine2;
+
+
+        Vehicle vehicle = new Vehicle();
+        vehicle.accelerate(20.5);
+
+
+        AutoVehicle autovehicle = new AutoVehicle(new Engine()); //new creaza un nou engine
     }
 }
