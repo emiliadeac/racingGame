@@ -6,9 +6,10 @@ public class Vehicle {
     private String name;
     private String color;
 
-    public double accelerate (double speed) {    //declararea metodei
+    public double accelerate (double speed) {    //declararea metodei/semnatura metodei
 
-        System.out.println(speed);
+        System.out.println(speed); //apelarea metodei
+        //
         return 10.1; //declararea metodei double (public)
 
     }
