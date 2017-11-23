@@ -33,7 +33,7 @@ public class App
         car2.setColor("red");
         car2.setFuelLevel(100.0);
         car2.setMileage(13.5);
-        car2.setDoorCount(2); 
+        car2.setDoorCount(2);
 
 
         Vehicle vehicle = new Vehicle();
