@@ -5,6 +5,33 @@ public class Race {
     private Car firstCompetitor;
     private Car secondCompetitor;
 
+    public void start (){
+        Engine engine = new Engine();
+        engine.setManufacturer("Volvo");
+
+        firstCompetitor = createCompetitor(engine,"Volvo", "red", 40, 8.5,4);
+
+        Engine engine2= new Engine();
+        engine2.setManufacturer("Honda");
+        secondCompetitor = createCompetitor(engine2, "Honda", "green", 70, 10.6, 2);
+    }
+
+//METODA
+// parameters contain car prefix just to demo; they can have any name
+    private Car createCompetitor (Engine carEngine, String carName, String carColor, double carFuelLevel, double carMileage, int carDoorCount  ){
+        Car competitor = new Car(carEngine);
+        competitor.setName(carName);
+        competitor.setColor(carColor);
+        competitor.setFuelLevel(carFuelLevel);
+        competitor.setMileage(carMileage);
+        competitor.setDoorCount(carDoorCount);
+
+        return competitor;
+    }
+
+
+
+
     public Car getFirstCompetitor() {
         return firstCompetitor;
     }
